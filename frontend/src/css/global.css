@@ -1,0 +1,96 @@
+/**
+ * Global Application Styles
+ * This file contains application-wide styles and CSS variables used throughout the application.
+ * It includes:
+ * - CSS Custom Properties (variables) for consistent theming
+ * - Base element styles
+ * - Custom scrollbar styling
+ * - Font settings and smoothing
+ */
+
+/* CSS Custom Properties - Theme Variables */
+:root {
+    --primary-bg: #1a1a2e;
+    --secondary-bg: #2a2a3a;
+    --tertiary-bg: #3a3a4a;
+    --border-color: #4a4a5a;
+
+    --primary-text: #f5f5f5;
+    --secondary-text: #e0e0e0;
+    --muted-text: #a0a0a0;
+
+    --accent-color: #2ecc71;
+    --accent-hover: #27ae60;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --error-color: #e74c3c;
+
+    --active-color: #3a3a4a;
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    --scrollbar-track: #2a2a3a;
+    --scrollbar-thumb: #3a3a4a;
+    --scrollbar-hover: #4a4a5a;
+}
+
+/* Base Element Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    /* System font stack for optimal readability */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    /* Font smoothing for better rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+}
+
+/* Root Container */
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Universal Box Sizing Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;  /* Width for vertical scrollbar */
+    height: 8px; /* Height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover);
+}

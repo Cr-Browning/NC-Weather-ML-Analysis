@@ -1,0 +1,402 @@
+.visuals-wrapper {
+    min-height: calc(100vh - 60px);
+    padding: 1rem;
+    background-color: var(--primary-bg);
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.visuals-section {
+    margin-bottom: 2rem;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.visuals-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.visuals-header h1 {
+    color: var(--primary-text);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.visuals-header .subtitle {
+    color: var(--muted-text);
+    font-size: 1.1rem;
+}
+
+.date-range-info {
+    width: 100%;
+    margin: 0 0 2rem 0;
+    padding: 1.5rem;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-range-info h2 {
+    color: var(--secondary-text);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.range-details {
+    display: flex;
+    justify-content: space-around;
+    color: var(--muted-text);
+    gap: 2rem;
+}
+
+.range-details p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.calendar-container {
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    background-color: var(--secondary-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--secondary-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.toggle-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.toggle-button {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background: var(--secondary-bg);
+    color: var(--primary-text);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+}
+
+.toggle-button:hover {
+    background: var(--tertiary-bg);
+    border-color: var(--accent-color);
+}
+
+.toggle-button.active {
+    background-color: var(--active-color);
+    color: var(--primary-text);
+    border-color: var(--accent-color);
+}
+
+.toggle-button.active:hover {
+    background: var(--tertiary-bg);
+}
+
+.city-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    margin: 10px 0;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    width: 100%;
+}
+
+.city-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all var(--transition-normal);
+    color: var(--secondary-text);
+    background-color: var(--secondary-bg);
+}
+
+.city-checkbox:hover {
+    background-color: var(--tertiary-bg);
+    border-color: var(--accent-color);
+}
+
+.city-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--accent-color);
+}
+
+.city-checkbox span {
+    font-weight: 500;
+    font-size: 24px;
+    text-shadow: 
+        -1px -1px 0 var(--primary-bg),
+        1px -1px 0 var(--primary-bg),
+        -1px 1px 0 var(--primary-bg),
+        1px 1px 0 var(--primary-bg);
+}
+
+.plot-container {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 1.5rem;
+    transition: all var(--transition-normal);
+    width: 100%;
+    max-width: 800px;
+    min-height: 500px;
+    flex: 1 1 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.2rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.plot-container .js-plotly-plot {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 80% !important;
+    box-sizing: border-box;
+}
+
+.plot-container h3 {
+    color: var(--secondary-text);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2em;
+    color: var(--muted-text);
+}
+
+.error {
+    text-align: center;
+    padding: 40px;
+    color: var(--error-color);
+    background: rgba(231, 76, 60, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.Visuals {
+    padding: 20px;
+}
+
+.Visuals h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #bbbbbb;
+}
+
+@media (max-width: 768px) {
+    .visuals-wrapper {
+        padding: 1rem;
+    }
+
+    .visuals-header h1 {
+        font-size: 2rem;
+    }
+
+    .calendar-container {
+        padding: 1rem;
+    }
+
+    .plot-container {
+        padding: 1rem;
+    }
+}
+
+.weather-card {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    color: var(--primary-text);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    transition: all var(--transition-normal);
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--tertiary-bg) 25%, var(--border-color) 50%, var(--tertiary-bg) 75%);
+  background-size: 400% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+  border-radius: var(--border-radius-sm);
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0 }
+  100% { background-position: -100% 0 }
+}
+
+.plots-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.param-selection {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1800px;
+    margin: 10px;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.param-selection-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background: var(--secondary-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.param-selection h2 {
+    color: var(--secondary-text);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.param-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 5px;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    margin: 5px 0;
+    justify-content: center;
+    width: 100%;
+}
+
+.param-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all var(--transition-normal);
+    color: var(--secondary-text);
+    background-color: var(--secondary-bg);
+}
+
+.param-checkbox:hover {
+    background-color: var(--tertiary-bg);
+    border-color: var(--accent-color);
+}
+
+.param-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--accent-color);
+}
+
+.param-checkbox span {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.param-submit-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background: var(--secondary-bg);
+    color: var(--primary-text);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    align-self: center;
+}
+
+.param-submit-button:hover {
+    background: var(--tertiary-bg);
+    border-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .param-selection-container {
+        padding: 1rem;
+    }
+
+    .param-checkboxes {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .param-checkbox {
+        padding: 6px 12px;
+    }
+}

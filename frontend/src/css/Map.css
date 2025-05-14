@@ -1,0 +1,131 @@
+/**
+ * Map Component Styles
+ * This file contains styles for the interactive map component and its associated markers and popups.
+ * The component uses Mapbox GL JS for rendering and includes custom styling for weather station markers
+ * and information popups.
+ */
+
+/* Marker Button Styles */
+.marker-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.marker-btn img {
+    width: 30px;
+    height: 30px;
+    filter: invert(0%); /* Black color for stations with data */
+}
+
+.marker-btn.no-data img {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(97%) contrast(97%); /* Red color for stations without data */
+}
+
+/* Popup Styles */
+.popup-text {
+    color: #000;
+    font-size: 14px;
+    padding: 5px;
+    background-color: #fff;
+}
+
+/* Weather Station Popup Container */
+.station-popup {
+    padding: 10px;
+    min-width: 200px;
+    background-color: #fff;
+}
+
+/* Station Name Header */
+.station-popup h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Date Information */
+.date-info {
+    color: #666;
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    font-style: italic;
+}
+
+/* Weather Information Container */
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Weather Data Text */
+.weather-info p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.coordinates {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.station-popup {
+    padding: 10px;
+    max-width: 300px;
+}
+
+.station-popup h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.date-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.weather-info {
+    margin-top: 10px;
+}
+
+.weather-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.daily-weather {
+    padding: 8px 0;
+}
+
+.daily-weather hr {
+    margin: 8px 0;
+    border: none;
+    border-top: 1px solid #eee;
+}
+
+.weather-list {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 8px;
+}
+
+.marker-btn:hover img {
+    transform: scale(1.2);
+}
+
+.map-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--tertiary-bg);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--border-color);
+    max-width: 1000px;
+    margin-bottom: var(--spacing-lg);
+}

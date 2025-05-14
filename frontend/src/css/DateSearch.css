@@ -1,0 +1,350 @@
+/**
+ * DateSearch Component Styles
+ * This file contains all styles for the date picker component and associated weather information display.
+ * The component uses react-datepicker and customizes it for a dark theme interface.
+ */
+
+/* Container Styles */
+.date-search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Date Input Field Styles */
+.date-input-container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 1.5rem;
+    z-index: 2;
+}
+
+.date-input {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--secondary-bg);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    font-size: 1rem;
+    color: var(--primary-text);
+    transition: all var(--transition-normal);
+}
+
+.date-input:hover {
+    border-color: var(--accent-color);
+}
+
+.date-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.date-input::placeholder {
+    color: #b0b0b0;
+}
+
+.date-error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: rgba(231, 76, 60, 0.1);
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+    color: #e74c3c;
+    font-size: 0.9rem;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Calendar Display Container */
+.calendar-display {
+    background-color: #2c3e50;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 2px solid #34495e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin-bottom: var(--spacing-lg);
+    transition: all var(--transition-normal);
+}
+
+/* DatePicker Core Customization */
+.react-datepicker {
+    font-family: inherit !important;
+    border: none !important;
+    background-color: transparent !important;
+    width: 100% !important;
+    font-size: 1.1rem !important;
+}
+
+.react-datepicker__month-container {
+    float: none !important;
+    width: 100% !important;
+    background-color: transparent !important;
+}
+
+/* Header Styles */
+.react-datepicker__header {
+    background-color: transparent !important;
+    border-bottom: 1px solid #34495e !important;
+    padding: 0.5rem 0 !important;
+}
+
+.react-datepicker__current-month {
+    color: #e0e0e0 !important;
+    font-weight: 600 !important;
+    font-size: 1.4rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Navigation Arrows */
+.react-datepicker__navigation {
+    top: 1rem !important;
+}
+
+.react-datepicker__navigation--previous {
+    left: 1rem !important;
+}
+
+.react-datepicker__navigation--next {
+    right: 1rem !important;
+}
+
+.react-datepicker__navigation-icon::before {
+    border-color: #e0e0e0 !important;
+}
+
+/* Day Names (Sun, Mon, etc.) */
+.react-datepicker__day-names {
+    display: flex !important;
+    justify-content: space-between !important;
+    margin: 0.5rem 0 !important;
+    padding: 0 1rem !important;
+}
+
+.react-datepicker__day-name {
+    color: #b0b0b0 !important;
+    width: 2.5rem !important;
+    text-align: center !important;
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+}
+
+/* Calendar Grid Layout */
+.react-datepicker__month {
+    margin: 0 !important;
+    padding: 0 1rem !important;
+}
+
+.react-datepicker__week {
+    display: flex !important;
+    justify-content: space-between !important;
+    margin: 0.2rem 0 !important;
+}
+
+/* Individual Day Styling */
+.react-datepicker__day {
+    color: #e0e0e0 !important;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    line-height: 2.5rem !important;
+    margin: 0 !important;
+    border-radius: 50% !important;
+    text-align: center !important;
+    font-size: 1.1rem !important;
+}
+
+.react-datepicker__day:hover {
+    background-color: #34495e !important;
+}
+
+.react-datepicker__day--selected {
+    background-color: #3498db !important;
+    color: white !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+    background-color: rgba(52, 152, 219, 0.5) !important;
+}
+
+.react-datepicker__day--outside-month {
+    color: #5c6c7c !important;
+}
+
+/* Dropdown Styles */
+.react-datepicker__month-dropdown,
+.react-datepicker__year-dropdown {
+    background-color: #2c3e50 !important;
+    border: 1px solid #34495e !important;
+    font-size: 1.2rem !important;
+}
+
+.react-datepicker__month-option,
+.react-datepicker__year-option {
+    color: #e0e0e0 !important;
+    padding: 0.8rem !important;
+    font-size: 1.2rem !important;
+}
+
+.react-datepicker__month-option:hover,
+.react-datepicker__year-option:hover {
+    background-color: #34495e !important;
+}
+
+.react-datepicker__month-read-view--selected-month,
+.react-datepicker__year-read-view--selected-year {
+    color: #e0e0e0 !important;
+    font-size: 1.3rem !important;
+    font-weight: 500 !important;
+}
+
+.react-datepicker__month-dropdown-container,
+.react-datepicker__year-dropdown-container {
+    margin: 0 0.5rem !important;
+    font-size: 1.2rem !important;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .date-search-container {
+        max-width: 100%;
+    }
+
+    .calendar-display {
+        padding: 1rem;
+    }
+
+    .react-datepicker__day {
+        width: 1.8rem !important;
+        height: 1.8rem !important;
+        line-height: 1.8rem !important;
+    }
+}
+
+/* Weather Information Display */
+.weather-info-container {
+    background-color: #2c3e50;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weather-info-container h3 {
+    color: var(--primary-text);
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+}
+
+.weather-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.weather-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.weather-stat:last-child {
+    border-bottom: none;
+}
+
+.weather-stat .label {
+    color: var(--muted-text);
+    font-size: 1.1rem;
+}
+
+.weather-stat .value {
+    color: var(--primary-text);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Loading State */
+.weather-info-container.loading {
+    text-align: center;
+    padding: 2rem;
+}
+
+.weather-info-container.loading p {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+}
+
+/* Hide Original DatePicker Elements */
+.react-datepicker-wrapper,
+.react-datepicker__input-container input,
+.react-datepicker__input-container input:focus {
+    display: none;
+}
+
+/* Hide Original Input */
+.react-datepicker__input-container {
+    display: none !important;
+}
+
+/* Mode Toggle Styles */
+.mode-toggle {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    background-color: #1a2634;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 2px solid #34495e;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #b0b0b0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #e0e0e0;
+}
+
+.toggle-btn.active {
+    background-color: var(--active-color);
+    color: var(--primary-text);
+}
+
+.weather-card,
+.calendar-display {
+  margin-bottom: var(--spacing-lg);
+  transition: all var(--transition-normal);
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--card-bg) 25%, var(--border-color) 50%, var(--card-bg) 75%);
+  background-size: 400% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+  border-radius: var(--border-radius-sm);
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0 }
+  100% { background-position: -100% 0 }
+}

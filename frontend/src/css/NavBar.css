@@ -1,0 +1,108 @@
+.navbar {
+    background-color: var(--secondary-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    width: 100vw;
+    max-width: 100%;
+    box-sizing: border-box;
+    min-height: 64px;
+    left: 0;
+    transition: all var(--transition-normal);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-container a {
+    color: var(--primary-text);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: color var(--transition-fast);
+}
+
+.navbar-container a:hover {
+    color: var(--accent-color);
+}
+
+.navbar-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.nav-link {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: var(--border-radius-sm);
+    transition: all var(--transition-normal);
+    color: var(--secondary-text);
+    font-weight: 500;
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    min-width: 120px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--primary-text);
+    background-color: var(--tertiary-bg);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--accent-color);
+    transition: all 0.2s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.nav-link.active {
+    background-color: var(--active-color);
+    color: var(--primary-text);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar-container a {
+        font-size: 1.2rem;
+    }
+
+    .navbar-links {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem;
+        min-width: 100px;
+        font-size: 0.9rem;
+    }
+}
